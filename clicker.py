@@ -64,7 +64,6 @@ class ClickerGame:
 
         self.show_menu()
         self.auto_tick()
-        self.show_povestka()
 
     def open_settings(self):
         # Окно настроек по кнопке "..."
