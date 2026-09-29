@@ -81,15 +81,6 @@ class ClickerGame:
         self.cur_theme = "light" if self.cur_theme == "dark" else "dark"
         self.apply_theme(self.cur_theme)
 
-    def show_povestka(self):
-        pov = tk.Toplevel(self.root)
-        pov.title("ВАЖЛИВЕ ПОВІДОМЛЕННЯ")
-        pov.geometry(f"{self.root.winfo_screenwidth() // 4}x{self.root.winfo_screenheight() // 2}")
-        pov.configure(bg="#7f8c8d")
-        pov.attributes("-topmost", True)
-        tk.Label(pov, text="ПОВІСТКА\n\nВам потрібно з'явитися до\nТЦК та СП для уточнення даних!\n\nГРА БЛОКОВАНА\nДО ЗАКРИТТЯ ЦЬОГО ВІКНА.", font=("Arial", 12, "bold"), fg="red", bg="#7f8c8d").pack(expand=True, fill=tk.BOTH)
-        pov.grab_set()
-
     def show_menu(self):
         self.g_frame.pack_forget()
         self.m_frame.pack(fill=tk.BOTH, expand=True)
